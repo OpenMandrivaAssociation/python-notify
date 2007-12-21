@@ -11,6 +11,7 @@ Source0: http://www.galago-project.org/files/releases/source/notify-python/%{ona
 License: LGPL
 Group: Development/Python
 Url: http://www.galago-project.org/news/index.php
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pygtk2.0-devel
 BuildRequires: libnotify-devel
 
