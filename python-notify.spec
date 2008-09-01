@@ -1,7 +1,7 @@
 %define name python-notify
 %define oname notify-python
 %define version 0.1.1
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Notification system based on libnotify
 Name: %{name}
@@ -14,6 +14,7 @@ Url: http://www.galago-project.org/news/index.php
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pygtk2.0-devel
 BuildRequires: libnotify-devel
+BuildRequires: ffi-devel
 
 %description
 This is the python version of the desktop notification framework.
@@ -23,6 +24,7 @@ This is the python version of the desktop notification framework.
 
 %build
 %configure2_5x
+touch src/pynotify.override
 %make
 
 %install
