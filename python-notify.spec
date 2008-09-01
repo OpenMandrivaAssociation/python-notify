@@ -14,7 +14,7 @@ Url: http://www.galago-project.org/news/index.php
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: pygtk2.0-devel
 BuildRequires: libnotify-devel
-BuildRequires: ffi-devel
+BuildRequires: ffi5-devel
 
 %description
 This is the python version of the desktop notification framework.
