@@ -1,7 +1,7 @@
 %define name python-notify
 %define oname notify-python
 %define version 0.1.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Notification system based on libnotify
 Name: %{name}
