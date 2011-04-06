@@ -1,13 +1,15 @@
 %define name python-notify
 %define oname notify-python
 %define version 0.1.1
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary: Notification system based on libnotify
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://www.galago-project.org/files/releases/source/notify-python/%{oname}-%{version}.tar.bz2
+Patch0: notify-python-0.1.1-libnotify07.patch
+Patch1: notify-python-0.1.1-link.patch
 License: LGPL
 Group: Development/Python
 Url: http://www.galago-project.org/news/index.php
@@ -21,8 +23,11 @@ This is the python version of the desktop notification framework.
 
 %prep
 %setup -q -n %oname-%version
+%patch0 -p1
+%patch1 -p0
 
 %build
+autoreconf -fi
 %configure2_5x
 touch src/pynotify.override
 %make
