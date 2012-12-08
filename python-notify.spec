@@ -1,7 +1,7 @@
 %define name python-notify
 %define oname notify-python
 %define version 0.1.1
-%define release %mkrel 9
+%define release %mkrel 8
 
 Summary: Notification system based on libnotify
 Name: %{name}
@@ -33,11 +33,11 @@ touch src/pynotify.override
 %make
 
 %install
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
@@ -46,4 +46,48 @@ rm -rf %{buildroot}
 %_datadir/pygtk/2.0/defs/pynotify.defs
 %_libdir/pkgconfig/notify-python.pc
 
+
+
+
+%changelog
+* Wed Apr 06 2011 Funda Wang <fwang@mandriva.org> 0.1.1-7mdv2011.0
++ Revision: 650839
+- add fedora patch to make it build with latest libnotify
+
+* Mon Nov 01 2010 Jani Välimaa <wally@mandriva.org> 0.1.1-6mdv2011.0
++ Revision: 591681
+- rebuild for python 2.7
+
+* Wed Mar 17 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1.1-5mdv2010.1
++ Revision: 523839
+- rebuilt for 2010.1
+
+* Fri Dec 26 2008 Adam Williamson <awilliamson@mandriva.org> 0.1.1-4mdv2009.1
++ Revision: 319468
+- rebuild with python 2.6
+
+* Mon Sep 01 2008 Tiago Salem <salem@mandriva.com.br> 0.1.1-3mdv2009.0
++ Revision: 278648
+- fix BuildRequires to libffi
+- force regeneration of pynotify.c. fixes attach_to_status_icon bug
+- bump release
+
+* Wed Jun 18 2008 Thierry Vignaud <tv@mandriva.org> 0.1.1-2mdv2009.0
++ Revision: 225135
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.1.1-1mdv2008.1
++ Revision: 136454
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Fri Jan 12 2007 Götz Waschk <waschk@mandriva.org> 0.1.1-1mdv2007.0
++ Revision: 107828
+- Import python-notify
+
+* Fri Jan 12 2007 Götz Waschk <waschk@mandriva.org> 0.1.1-1mdv2007.1
+- initial package
 
