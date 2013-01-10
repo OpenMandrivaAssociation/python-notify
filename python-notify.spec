@@ -23,6 +23,7 @@ This is the python version of the desktop notification framework.
 %patch1 -p0
 
 %build
+sed -i -e 's/AM_CONFIG_HEADER/AM_CONFIG_HEADERS/g' configure.ac
 autoreconf -fi
 %configure2_5x
 touch src/pynotify.override
