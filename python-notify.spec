@@ -3,7 +3,7 @@
 Summary:	Notification system based on libnotify
 Name:		python-notify
 Version:	0.1.1
-Release:	10
+Release:	11
 Source0:	http://www.galago-project.org/files/releases/source/notify-python/%{oname}-%{version}.tar.bz2
 Patch0:		notify-python-0.1.1-libnotify07.patch
 Patch1:		notify-python-0.1.1-link.patch
