@@ -12,7 +12,7 @@ Group:		Development/Python
 Url:		http://www.galago-project.org/news/index.php
 BuildRequires:	pygtk2.0-devel
 BuildRequires:	libnotify-devel
-BuildRequires:	ffi5-devel
+BuildRequires:	ffi-devel
 
 %description
 This is the python version of the desktop notification framework.
