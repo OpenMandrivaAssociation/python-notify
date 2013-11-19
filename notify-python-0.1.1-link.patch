@@ -1,5 +1,5 @@
---- configure.ac.link	2011-04-06 05:35:40.000000000 +0200
-+++ configure.ac	2011-04-06 05:36:01.000000000 +0200
+--- ./configure.ac.link	2011-04-06 05:35:40.000000000 +0200
++++ ./configure.ac	2011-04-06 05:36:01.000000000 +0200
 @@ -20,6 +20,7 @@
  AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers)])
  
