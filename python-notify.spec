@@ -3,7 +3,7 @@
 Summary:	Notification system based on libnotify
 Name:		python-notify
 Version:	0.1.1
-Release:	12
+Release:	13
 License:	LGPLv2
 Group:		Development/Python
 Url:		http://www.galago-project.org/news/index.php
