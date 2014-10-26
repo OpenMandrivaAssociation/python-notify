@@ -8,6 +8,7 @@ License:	LGPLv2
 Group:		Development/Python
 Url:		http://www.galago-project.org/news/index.php
 Source0:	http://www.galago-project.org/files/releases/source/notify-python/%{oname}-%{version}.tar.bz2
+Source100:	%{name}.rpmlintrc
 Patch0:		notify-python-0.1.1-libnotify07.patch
 Patch1:		notify-python-0.1.1-link.patch
 BuildRequires:	pkgconfig(libffi)
@@ -33,7 +34,7 @@ touch src/pynotify.override
 
 %files
 %doc NEWS AUTHORS ChangeLog
-%{py_platsitedir}/gtk-2.0/pynotify/
+%{py2_platsitedir}/gtk-2.0/pynotify/
 %{_datadir}/pygtk/2.0/defs/pynotify.defs
 %{_libdir}/pkgconfig/notify-python.pc
 
