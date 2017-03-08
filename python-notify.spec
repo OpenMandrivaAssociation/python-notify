@@ -1,9 +1,9 @@
 %define oname notify-python
 
 Summary:	Notification system based on libnotify
-Name:		python-notify
+Name:		python2-notify
 Version:	0.1.1
-Release:	19
+Release:	20
 License:	LGPLv2
 Group:		Development/Python
 Url:		http://www.galago-project.org/news/index.php
@@ -14,6 +14,7 @@ Patch1:		notify-python-0.1.1-link.patch
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(pygtk-2.0)
+%rename	python-notify
 
 %description
 This is the python version of the desktop notification framework.
