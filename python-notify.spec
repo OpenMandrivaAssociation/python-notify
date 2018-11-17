@@ -14,6 +14,7 @@ Patch1:		notify-python-0.1.1-link.patch
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(pygtk-2.0)
+BuildRequires:	pkgconfig(python2)
 %rename	python-notify
 
 %description
@@ -21,17 +22,17 @@ This is the python version of the desktop notification framework.
 
 %prep
 %setup -qn %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
 autoreconf -fi
 
 %build
-%configure2_5x
+%configure
 touch src/pynotify.override
 %make
 
 %install
-%makeinstall_std
+%makeinstall
 
 %files
 %doc NEWS AUTHORS ChangeLog
