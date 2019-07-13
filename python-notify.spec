@@ -8,7 +8,6 @@ License:	LGPLv2
 Group:		Development/Python
 Url:		http://www.galago-project.org/news/index.php
 Source0:	https://files.pythonhosted.org/packages/5e/ee/392ea0366a8d1389e6321697b26b3d98f0d828161a0a2ead4d1fa21dfc44/notify-0.3.1.tar.gz
-Source100:	%{name}.rpmlintrc
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(python)
