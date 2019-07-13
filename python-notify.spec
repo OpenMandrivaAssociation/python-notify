@@ -1,20 +1,17 @@
-%define oname notify-python
+%define oname notify
 
 Summary:	Notification system based on libnotify
-Name:		python2-notify
-Version:	0.1.1
-Release:	21
+Name:		python-notify
+Version:	0.3.1
+Release:	1
 License:	LGPLv2
 Group:		Development/Python
 Url:		http://www.galago-project.org/news/index.php
-Source0:	http://www.galago-project.org/files/releases/source/notify-python/%{oname}-%{version}.tar.bz2
+Source0:	https://files.pythonhosted.org/packages/5e/ee/392ea0366a8d1389e6321697b26b3d98f0d828161a0a2ead4d1fa21dfc44/notify-0.3.1.tar.gz
 Source100:	%{name}.rpmlintrc
-Patch0:		notify-python-0.1.1-libnotify07.patch
-Patch1:		notify-python-0.1.1-link.patch
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(libnotify)
-BuildRequires:	pkgconfig(pygtk-2.0)
-BuildRequires:	pkgconfig(python2)
+BuildRequires:	pkgconfig(python)
 %rename	python-notify
 
 %description
@@ -23,20 +20,15 @@ This is the python version of the desktop notification framework.
 %prep
 %setup -qn %{oname}-%{version}
 %autopatch -p1
-sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac
-autoreconf -fi
 
 %build
-%configure
-touch src/pynotify.override
-%make
+%py_build
 
 %install
-%makeinstall
+%py_install
 
 %files
-%doc NEWS AUTHORS ChangeLog
-%{py2_platsitedir}/gtk-2.0/pynotify/
-%{_datadir}/pygtk/2.0/defs/pynotify.defs
-%{_libdir}/pkgconfig/notify-python.pc
+%{_bindir}/notify
+%{py_puresitedir}/%{oname}
+%{py_puresitedir}/%{oname}-%{version}-py*.egg-info
 
