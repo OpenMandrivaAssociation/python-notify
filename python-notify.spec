@@ -11,6 +11,7 @@ Source0:	https://files.pythonhosted.org/packages/5e/ee/392ea0366a8d1389e6321697b
 BuildRequires:	pkgconfig(libffi)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python-setuptools
 %rename	python-notify
 
 %description
