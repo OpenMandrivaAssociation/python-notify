@@ -1,4 +1,5 @@
 %define oname notify
+%define debug_package %nil
 
 Summary:	Notification system based on libnotify
 Name:		python-notify
