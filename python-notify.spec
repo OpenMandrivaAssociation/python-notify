@@ -20,7 +20,7 @@ This is the python version of the desktop notification framework.
 
 %prep
 %autosetup -p1 -n %{oname}-%{version}
-2to3 -w src/notify/*.py
+#2to3 -w src/notify/*.py
 
 %build
 %py_build
