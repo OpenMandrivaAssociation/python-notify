@@ -4,7 +4,7 @@
 Summary:	Notification system based on libnotify
 Name:		python-notify
 Version:	0.3.1
-Release:	6
+Release:	7
 License:	LGPLv2
 Group:		Development/Python
 Url:		https://pypi.org/project/notify/
